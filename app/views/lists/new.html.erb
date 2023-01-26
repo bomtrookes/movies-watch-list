@@ -1,1 +1,9 @@
-<h1>Lists New</h1>
+<div class="container mt-3">
+  <h1>Lists New</h1>
+  <hr>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Create List" %>
+  <% end %>
+</div>
