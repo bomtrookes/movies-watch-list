@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @list.name %></h1>
+  <%= link_to "Back To Lists", lists_path %>
+  <p>Add To List</p>
+  <hr>
+  <% @bookmarks.each do |bookmark| %>
+    <div class="container">
+      <h3><%= bookmark.movie.title %></h3>
+      <p><%= bookmark.movie.overview %></p>
+      <img src="<%= bookmark.movie.poster_url%>" alt="<%= bookmark.movie.title %>" style="width:200px">
+    </div>
+    <br>
+  <% end %>
+</div>
