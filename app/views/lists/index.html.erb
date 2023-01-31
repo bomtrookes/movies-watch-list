@@ -1,5 +1,5 @@
-<div class="container mt-3">
-  <h1>All Lists</h1>
+<div class="container mt-3" data-controller="changecolor">
+  <h1 data-changecolor-target="title" data-action="click->changecolor#change">All Lists</h1>
   <%= link_to "Add List", new_list_path %>
   <hr>
 

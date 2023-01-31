@@ -4,10 +4,12 @@
   <%= link_to "Add To List", new_list_bookmark_path(@list) %>
   <hr>
   <% @list.movies.each do |movie| %>
+   <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
     <div class="container">
       <h3><%= movie.title %></h3>
       <p><%= movie.overview %></p>
       <img src="<%= movie.poster_url%>" alt="<%= movie.title %>" style="width:200px">
+      <p><%= bookmark.comment %></p>
     </div>
     <br>
   <% end %>

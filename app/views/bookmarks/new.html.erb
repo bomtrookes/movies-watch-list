@@ -2,8 +2,9 @@
   <h1>Bookmarks New</h1>
   <hr>
     <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%# <%= f.association :movie, collection: Movie.all.map { |m| [m.title, m.id] } %>
+      <%= f.association :movie, collection: Movie.all.order(:title) %>
       <%= f.input :comment %>
-      <%= f.assication :movie %>
       <%= f.submit "Create List" %>
     <% end %>
 </div>

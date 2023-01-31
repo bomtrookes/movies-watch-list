@@ -20,6 +20,7 @@ class ListsController < ApplicationController
 
   def show
     @lists = List.all
+    @bookmarks = Bookmark.all
     @bookmark = Bookmark.new
   end
 
